@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/header/Header';
+import ItemListContainer from './components/itemListContainer/ItemListContainer';
+import Footer from './components/footer/Footer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+let name = "Anabel";
+
+function App () {
+    return (
+        <>
+            <div className='App'>
+                <Header/>
+            </div>
+
+            <div>
+                <ItemListContainer saludo={`¡Bienvenida/o a Tazitas Shop, ${name}!`}/>
+            </div>
+            
+            <h2>Tu tienda ideal con todo lo que necesites para crear tus postres</h2>
+            
+
+            <div>
+                <Footer/>
+            </div>
+        </>
+
+    )
+} ;
 
 export default App;

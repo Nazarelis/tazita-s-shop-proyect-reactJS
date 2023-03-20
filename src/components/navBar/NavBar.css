@@ -1,0 +1,40 @@
+.Navigation {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background-color: #eccb5f;
+} 
+
+.Navigation, a {
+    text-decoration: none;
+}
+
+.Navigation, ul {
+    display: flex;
+
+}
+
+.navbar-expand-lg bg-light {
+    background-color: #eccb5f;
+}
+
+img{
+    width: 15%;
+}
+
+.d-flex{
+    width: 50%;
+}
+
+.btn {
+    color: white;
+    border-color: black;
+    background-color: black;
+}
+
+.btn:hover{
+    color:black;
+    background-color: white;
+    border-color: black;
+}
