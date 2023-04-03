@@ -1,10 +1,10 @@
 import React from 'react'
 import ItemListContainer from '../components/itemListContainer/ItemListContainer'
-import CardList from '../components/cardList/CardList';
+
 
 
 const Home = () => {
-    let name = "XX"; 
+    let name = "xxx"; 
     let greeting=`¡Bienvenida/o a Tazitas Shop, ${name}!`
   return (
     <>
@@ -14,9 +14,6 @@ const Home = () => {
         <h1>Home</h1>
         <ItemListContainer greeting={greeting}/>
         <h2>Tu tienda ideal con todo lo que necesites para crear tus postres</h2>
-    </div>
-    <div>
-        <CardList />
     </div>
 
 

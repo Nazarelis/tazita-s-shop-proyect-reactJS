@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
 import CardUtensils from '../cardUtensils/CardUtensils';
-
+import { Link } from 'react-router-dom';
+import './CardList.css'
 
 const CardList = () => {
     
@@ -13,12 +14,17 @@ const CardList = () => {
     }, [])
 
   return (
-    <div>
-        <h1>CardList</h1>
+    <div className='card-container'>
+        
         {utensils.map((utensil) => {
             return(
-                <div>
-                    <CardUtensils key={utensil.id} data={utensil}/>
+                <div key={utensil.id}>
+                    <Link to={ `/utensil-detail/${utensil.id}`}>
+
+                        <CardUtensils  data={utensil}/>
+                    
+                    </Link>
+                    
                 </div>
             )
         })}
