@@ -1,31 +1,31 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Header from './components/header/Header';
-import ItemListContainer from './components/itemListContainer/ItemListContainer';
+
 import Footer from './components/footer/Footer'
 
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
-let name = "Anabel";
+ 
 
 function App () {
+
     return (
-        <>
-            <div className='App'>
-                <Header/>
-            </div>
-
-            <div>
-                <ItemListContainer saludo={`¡Bienvenida/o a Tazitas Shop, ${name}!`}/>
-            </div>
+            <Router>
+                  <div className='App'>
+                  <Header/>
+                    <Routes>
+                        <Route path='/' element={<Home/>}/>
+                        <Route path='/about' element={<About/>}/>
+                        <Route path='/contact' element={<Contact/>}/>
+                    </Routes> 
+                  </div>
             
-            <h2>Tu tienda ideal con todo lo que necesites para crear tus postres</h2>
-            
-
-            <div>
-                <Footer/>
-            </div>
-        </>
-
+            </Router>
     )
 } ;
 
