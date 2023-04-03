@@ -5,7 +5,7 @@ import CardUtensils from '../cardUtensils/CardUtensils';
 
 const CardList = () => {
     
-    const [utensils, setUtensils] = useState('');
+    const [utensils, setUtensils] = useState([]);
     
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const CardList = () => {
         {utensils.map((utensil) => {
             return(
                 <div>
-                    <CardUtensils />
+                    <CardUtensils key={utensil.id} data={utensil}/>
                 </div>
             )
         })}
