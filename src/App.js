@@ -11,8 +11,8 @@ import Utensils from './pages/Utensils';
 import UtensilDetail from './pages/UtensilDetail';
  
 
-function App () {
 
+function App () {
     return (
             <Router>
                   <div className='App'>

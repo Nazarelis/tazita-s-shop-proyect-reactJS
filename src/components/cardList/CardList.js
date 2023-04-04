@@ -32,4 +32,4 @@ const CardList = () => {
   )
 }
 
-export default CardList
+export default CardList;

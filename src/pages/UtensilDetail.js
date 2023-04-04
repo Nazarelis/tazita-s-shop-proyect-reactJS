@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CardUtensils from '../components/cardUtensils/CardUtensils';
 import { useParams } from 'react-router-dom';
-
+ 
 
 const UtensilDetail = () => {
     const [utensil, setUtensil] = useState({});
@@ -23,4 +23,4 @@ const UtensilDetail = () => {
   )
 }
 
-export default UtensilDetail
+export default UtensilDetail;

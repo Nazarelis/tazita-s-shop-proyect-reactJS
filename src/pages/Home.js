@@ -8,17 +8,13 @@ const Home = () => {
     let greeting=`¡Bienvenida/o a Tazitas Shop, ${name}!`
   return (
     <>
-
-
     <div>
         <h1>Home</h1>
         <ItemListContainer greeting={greeting}/>
-        <h2>Tu tienda ideal con todo lo que necesites para crear tus postres</h2>
+        <h2>Tu tienda ideal con todo lo que necesitas para crear tus postres</h2>
     </div>
-
-
     </>
   )
 }
 
-export default Home
+export default Home;

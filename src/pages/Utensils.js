@@ -14,4 +14,4 @@ const Utensils = () => {
   )
 }
 
-export default Utensils
+export default Utensils;
