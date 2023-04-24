@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardContent, CardMedia, Typography, CardActionArea} from '@mui/material';
+import {Card, CardContent, CardMedia, Typography, CardActionArea,} from '@mui/material';
 
 
 
@@ -10,19 +10,21 @@ const CardUtensils = ({data}) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image= {data.image}
+          height="200"
+          image= {data.img}
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {data.title}
+            {data.utensil} 
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {data.price}$
           </Typography>
         </CardContent>
       </CardActionArea>
+
+
     </Card>
   );
 }

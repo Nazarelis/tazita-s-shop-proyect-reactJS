@@ -1,0 +1,11 @@
+.button{
+    width: 5%;
+    background-color: blanchedalmond;
+    border-radius: 50%; 
+    color: black
+};
+
+.button:hover{
+    background-color: black;
+    color: blanchedalmond;
+}

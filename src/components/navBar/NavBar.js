@@ -18,15 +18,32 @@ const NavBar = () => {
             </Link>
 
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <Link class="nav-link active" aria-current="page" to="/" >Inicio</Link>
-                    <Link class="nav-link" to="/utensils">Utensilios</Link>
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div className="navbar-nav">
+                    <Link className="nav-link active" aria-current="page" to="/" >Inicio</Link>
+                    {/* <Link className="nav-link" to="/utensils">Utensilios</Link> */}
+                    <li className="nav-item dropdown">
+                    <Link className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" to="/utensils">Categorias</Link>
+                    <ul className="dropdown-menu">
+                        <Link a class="dropdown-item" to="/cortadores">Cortadores</Link>
+                        <Link a class="dropdown-item" to="/moldes">Moldes</Link>
+                        <Link a class="dropdown-item" to="/brochas">Brochas</Link>
+                        <Link a class="dropdown-item" to="/boquillas">Boquillas</Link>
+                        <Link a class="dropdown-item" to="/espatulas">Espatulas</Link>
+                    </ul>
+
+                    </li>
+
+
                     <Link class="nav-link" to="/about">Sobre nosotros</Link>
                     <Link class="nav-link" to="/contact">Contacto</Link>
+
+
+
+
                 </div>
             </div>
 
