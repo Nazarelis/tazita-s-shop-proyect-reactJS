@@ -1,22 +1,16 @@
 import React, { useEffect, useState } from 'react';
-//import axios from 'axios';
 import CardUtensils from '../components/cardUtensils/CardUtensils';
-import { useParams } from 'react-router-dom';
-import {Button} from '@mui/material';
+import {Button, CircularProgress} from '@mui/material';
 import './UtensilDetail.css';
-
+import { useParams } from 'react-router-dom';
 import {db} from '../firebase/firebaseConfig'
-import { collection, query, getDocs} from "firebase/firestore";
-
-
-
-
-
+import { doc, getDoc } from "firebase/firestore";
 
 const UtensilDetail = () => {
 
   //BOTONES INC Y DEC
-  const [cantElements,setCantElements] = useState(0)
+  const [cantElements,setCantElements] = useState(0);
+  const {id} = useParams();
 
   function increment(){
     setCantElements(cantElements + 1)
@@ -24,54 +18,61 @@ const UtensilDetail = () => {
   };
 
   function decrement(){
-    
-      setCantElements(cantElements - 1)
-      console.log(cantElements)
+    if (cantElements > 0) {
+      setCantElements(cantElements - 1);
+      console.log(cantElements);
+    } else {
+      setCantElements(0);
+    }
   };
 
 
-// DATA
-  const [utensil, setUtensil] = useState([]);
-  const q = query(collection(db, "utensils"));
+  // DATA
+  const [utensil, setUtensil] = useState(null);
+
+  const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
-      const getUtensil = async() => {
-          const querySnapshot = await getDocs(q);
-          const docs = [];
-          querySnapshot.forEach((doc) => {
+    const getUtensil = async () => {
+      const docRef = doc(db, "utensils", id);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        setUtensil({id: docSnap.id, ...docSnap.data()});
+      } else {
+        console.log("No such document!");
+      }
+      setIsLoading(false)
+    };
+    getUtensil();
+  }, [id]);
 
-              //console.log(doc.data());
-              docs.push({...doc.data(), id: doc.id})
+  //  if (!utensil) {
+  //    return <div>Loading...</div>;
+  //  }
 
-      });     
-
-      //console.log(docs)
-      setUtensil(docs)
-  };
-  
-      getUtensil()
-  }, []);
-    
-    
-    // useEffect(() => {
-    //     axios(`https://my-json-server.typicode.com/Nazarelis/api_reposteria/utensilios/${id}`).then(res => setUtensil(res.data))
-    // }, [id])
-
-
-  return (
+   return (
     <>
-      <h1>Detalles del Producto</h1>
-      <CardUtensils data={utensil}/>
-
-      <>
-      <Button className='button' onClick={increment
-      }>+</Button>
+      {isLoading ? (
+        <div className="loading-spinner">
+          <CircularProgress />
+        </div>
+      ) : utensil ? (
+        <div style={{marginTop:"5%"}} key={utensil.id}>
+          <CardUtensils data={utensil} />
+        </div>
+      ) : (
+        <div>No se encontraron datos</div>
+      )}
+      <Button className='button' onClick={increment}>
+        +
+      </Button>
       <h3> {cantElements} </h3>
-      <Button className='button' onClick={decrement}>-</Button>
-
-      </>
+      <Button className='button' onClick={decrement} disabled={cantElements <= 0}>
+        -
+      </Button>
     </>
-  )
-}
+  );
+};
 
-export default UtensilDetail;
+export default UtensilDetail; 

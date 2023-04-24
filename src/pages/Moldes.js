@@ -26,7 +26,7 @@ const Moldes = () => {
     };
     
         getMolde()
-    }, []);
+    }, );
 
 
     return(

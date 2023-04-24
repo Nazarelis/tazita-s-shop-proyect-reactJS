@@ -3,9 +3,9 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // COMPONENTS
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 // PAGES
 import Home from './pages/Home';
-import About from './pages/About';
 import Contact from './pages/Contact';
 import Utensils from './pages/Utensils';
 import UtensilDetail from './pages/UtensilDetail';
@@ -16,31 +16,34 @@ import Brochas from './pages/Brochas';
 import Espatulas from './pages/Espatulas';
 
 
-function App () {
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Header />
+        <div className="content-wrap">
 
-    return (
-            <Router>
-                  <div className='App'>
-                  <Header/>
-                    <Routes>
-                        <Route path='/' element={<Home/>}/>
-                        <Route path='/about' element={<About/>}/>
-                        <Route path='/contact' element={<Contact/>}/>
-                        <Route path='/utensils' element={<Utensils/>}/>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/utensils" element={<Utensils />} />
 
-                        <Route path='/moldes' element={<Moldes/>}></Route>
-                        <Route path='/cortadores' element={<Cortadores/>}></Route>
-                        <Route path='/boquillas' element={<Boquillas/>}></Route>
-                        <Route path='/brochas' element={<Brochas/>}></Route>
-                        <Route path='/espatulas' element={<Espatulas/>}></Route>
+            <Route path="/moldes" element={<Moldes />} />
+            <Route path="/cortadores" element={<Cortadores />} />
+            <Route path="/boquillas" element={<Boquillas />} />
+            <Route path="/brochas" element={<Brochas />} />
+            <Route path="/espatulas" element={<Espatulas />} />
 
-                        <Route path='/utensil-detail/:id' element={<UtensilDetail/>}/>
+            <Route path="/utensil-detail/:id" element={<UtensilDetail />} />
+          </Routes>
 
-                    </Routes> 
-                  </div>
-            
-            </Router>
-    )
-} ;
+          
+
+        </div>
+      <Footer />
+      </div>
+    </Router>
+  );
+}
 
 export default App;

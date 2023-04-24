@@ -1,0 +1,33 @@
+.footer{
+    background: #fcf1d8;
+    color: #333;
+    padding: 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.div-container{
+    display: flex;
+    justify-content: center;
+    align-Items: center;
+    margin-Bottom: '1rem' 
+
+}
+
+.title{
+    margin-Right: 1rem; 
+}
+.parrafo{
+    text-Align: center;
+}
+
+a {
+    color: grey;
+  }

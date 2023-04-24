@@ -27,7 +27,7 @@ const Brochas = () => {
 };
 
     getBrocha()
-}, []);
+},);
 
  
   return (

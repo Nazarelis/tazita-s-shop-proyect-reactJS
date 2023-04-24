@@ -1,8 +1,11 @@
 .card-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 8% 8%;
+    gap: 1.5% 8%;
     align-items: center;
     margin-top: 6%;
+    overflow: hidden;
+    padding-bottom: 20%;
+
 
 };

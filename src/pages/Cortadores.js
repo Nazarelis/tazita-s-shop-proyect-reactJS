@@ -28,7 +28,7 @@ const Cortadores = () => {
 };
 
     getCortadores()
-}, []);
+}, );
 
 
  

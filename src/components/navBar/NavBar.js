@@ -38,7 +38,6 @@ const NavBar = () => {
                     </li>
 
 
-                    <Link class="nav-link" to="/about">Sobre nosotros</Link>
                     <Link class="nav-link" to="/contact">Contacto</Link>
 
 

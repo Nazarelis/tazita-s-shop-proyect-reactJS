@@ -27,7 +27,7 @@ const Espatulas = () => {
 };
 
     getEspatulas()
-}, []);
+});
 
   return (
     <>
