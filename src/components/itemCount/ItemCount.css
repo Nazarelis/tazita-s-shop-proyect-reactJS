@@ -1,0 +1,17 @@
+.counter{
+    background-color: none;
+    padding: 2%;
+    text-align: center;
+    width: auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.button-inc-dec{
+
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+
+}

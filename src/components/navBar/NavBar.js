@@ -8,12 +8,12 @@ const NavBar = () => {
     return (
 
     <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
+        <div className="container-fluid">
 
             <Link to="/"> 
             <div >
                 <img src={img} alt="logo" />
-                <h1 class="navbar-brand" href="#">Tazita's Shop</h1>
+                <h1 className="navbar-brand" href="#">Tazita's Shop</h1>
             </div>
             </Link>
 
@@ -28,17 +28,17 @@ const NavBar = () => {
                     <li className="nav-item dropdown">
                     <Link className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" to="/utensils">Categorias</Link>
                     <ul className="dropdown-menu">
-                        <Link a class="dropdown-item" to="/cortadores">Cortadores</Link>
-                        <Link a class="dropdown-item" to="/moldes">Moldes</Link>
-                        <Link a class="dropdown-item" to="/brochas">Brochas</Link>
-                        <Link a class="dropdown-item" to="/boquillas">Boquillas</Link>
-                        <Link a class="dropdown-item" to="/espatulas">Espatulas</Link>
+                        <Link a className="dropdown-item" to="/cortadores">Cortadores</Link>
+                        <Link a className="dropdown-item" to="/moldes">Moldes</Link>
+                        <Link a className="dropdown-item" to="/brochas">Brochas</Link>
+                        <Link a className="dropdown-item" to="/boquillas">Boquillas</Link>
+                        <Link a className="dropdown-item" to="/espatulas">Espatulas</Link>
                     </ul>
 
                     </li>
 
 
-                    <Link class="nav-link" to="/contact">Contacto</Link>
+                    <Link className="nav-link" to="/contact">Contacto</Link>
 
 
 
@@ -46,9 +46,12 @@ const NavBar = () => {
                 </div>
             </div>
 
+            <Link to="/cart-elements">
             <div>
                 <CartWidget/> 
             </div>
+            </Link>
+
         </div>
     </nav>
 

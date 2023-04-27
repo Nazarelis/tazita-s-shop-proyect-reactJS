@@ -14,14 +14,21 @@ import Cortadores from './pages/Cortadores';
 import Boquillas from './pages/Boquillas';
 import Brochas from './pages/Brochas';
 import Espatulas from './pages/Espatulas';
+import Cart from './pages/Cart';
+// CONTEXT
+//import CartProvider from './context/CartContext';
+
+
+
 
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
-        <div className="content-wrap">
+
+          <Header />
+          <div className="content-wrap">
 
           <Routes>
             <Route path="/" element={<Home />} />
@@ -35,11 +42,15 @@ function App() {
             <Route path="/espatulas" element={<Espatulas />} />
 
             <Route path="/utensil-detail/:id" element={<UtensilDetail />} />
+
+            <Route path='/cart-elements' element={<Cart/>} />
           </Routes>
 
+          </div>
+        
           
 
-        </div>
+        
       <Footer />
       </div>
     </Router>
