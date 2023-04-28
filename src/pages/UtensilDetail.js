@@ -58,8 +58,15 @@ const UtensilDetail = ({data}) => {
       ) : utensil ? (
         <div className='container-product'>
           <h1>Detalles del Producto</h1>
-          <div style={{marginTop:"5%", width:"100%", display:"flex", justifyContent:"center"}} key={utensil.id}> 
+          
+          <div className='card-container' style={{marginTop:"5%", width:"100%", display:"flex", justifyContent:"center"}} key={utensil.id}> 
+
+          <div>
             <CardUtensils data={utensil} />
+          </div>
+
+          <div className='card-parrafo'>
+            <p> {utensil.inf}</p>
           </div>
           {
             goToCart 
@@ -71,6 +78,10 @@ const UtensilDetail = ({data}) => {
             </>
             :<ItemCount initial={1} stock={5} onAdd={onAdd}/>
           }
+
+            
+          </div>
+
           
         </div>
       ) : (

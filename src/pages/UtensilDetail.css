@@ -11,9 +11,23 @@
 } */
 
 .container-product{
-    width: 100%;
+    max-width: 100%;
     margin: 5% 5% 10% 10%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    
+}
+
+.card-container{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.card-parrafo {
+    padding-top: 5%;
 }
