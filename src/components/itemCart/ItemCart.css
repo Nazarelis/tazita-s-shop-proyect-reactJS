@@ -1,0 +1,10 @@
+.itemCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid whitesmoke;
+    max-width: 80%;
+    margin: 1rem auto;
+    padding-bottom: 2%;
+
+}

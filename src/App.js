@@ -7,7 +7,6 @@ import Footer from './components/footer/Footer';
 // PAGES
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import Utensils from './pages/Utensils';
 import UtensilDetail from './pages/UtensilDetail';
 import Moldes from './pages/Moldes';
 import Cortadores from './pages/Cortadores';
@@ -16,7 +15,8 @@ import Brochas from './pages/Brochas';
 import Espatulas from './pages/Espatulas';
 import Cart from './pages/Cart';
 // CONTEXT
-//import CartProvider from './context/CartContext';
+import CartProvider from './context/CartContext';
+
 
 
 
@@ -24,36 +24,41 @@ import Cart from './pages/Cart';
 
 function App() {
   return (
+    <>
+    
     <Router>
-      <div className="App">
+      <CartProvider value="">
+        <div className="App">
 
           <Header />
           <div className="content-wrap">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/contact" element={<Contact />} />
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/utensils" element={<Utensils />} />
+              <Route path="/moldes" element={<Moldes />} />
+              <Route path="/cortadores" element={<Cortadores />} />
+              <Route path="/boquillas" element={<Boquillas />} />
+              <Route path="/brochas" element={<Brochas />} />
+              <Route path="/espatulas" element={<Espatulas />} />
 
-            <Route path="/moldes" element={<Moldes />} />
-            <Route path="/cortadores" element={<Cortadores />} />
-            <Route path="/boquillas" element={<Boquillas />} />
-            <Route path="/brochas" element={<Brochas />} />
-            <Route path="/espatulas" element={<Espatulas />} />
+              <Route path="/utensil-detail/:id" element={<UtensilDetail />} />
 
-            <Route path="/utensil-detail/:id" element={<UtensilDetail />} />
-
-            <Route path='/cart-elements' element={<Cart/>} />
-          </Routes>
+              <Route path='/cart-elements' element={<Cart/>} />
+            </Routes>
 
           </div>
-        
           
+                  
+          <Footer />
+        </div>
 
-        
-      <Footer />
-      </div>
+
+      </CartProvider>
     </Router>
+    
+    </>
+
   );
 }
 

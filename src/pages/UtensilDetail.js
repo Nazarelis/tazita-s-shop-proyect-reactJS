@@ -7,7 +7,10 @@ import {db} from '../firebase/firebaseConfig'
 import { doc, getDoc } from "firebase/firestore";
 import ItemCount from '../components/itemCount/ItemCount';
 
-const UtensilDetail = () => {
+//CONTEXT
+import { useCartContext } from '../context/CartContext';
+
+const UtensilDetail = ({data}) => {
 
    const {id} = useParams();
 
@@ -38,10 +41,12 @@ const UtensilDetail = () => {
 
 
     const [goToCart,setGoToCart] = useState(false);  
+    const {addProduct} = useCartContext()
 
     const onAdd=(quantity)=> {
       // console.log (`Compraste ${quantity} unidadades`);
       setGoToCart(true)
+      addProduct(utensil, quantity);
     }
 
    return (
@@ -58,9 +63,12 @@ const UtensilDetail = () => {
           </div>
           {
             goToCart 
-            ? <Link to='/cart-elements'>
-              <Button>Terminar Compra</Button>
-              </Link>
+            ? 
+            <>
+            <Link to='/cart-elements'> <Button>Terminar Compra</Button></Link>
+            <Link to='/'> <Button>Seguir Comprando</Button></Link>
+
+            </>
             :<ItemCount initial={1} stock={5} onAdd={onAdd}/>
           }
           
