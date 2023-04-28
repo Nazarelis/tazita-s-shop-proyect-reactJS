@@ -1,5 +1,5 @@
-# PROYECTO TAZITAS SHOP - CURSO DE CODERHOUSE
+# PROYECTO TAZITAS SHOP
 
 #### Nombre: Anabel Ojeda
 
-**Proyecto creado para el curso de React JS en CoderHouse**
+Proyecto ficticio de sitio e-commerce creado para el curso de ReactJS de CoderHouse. 
