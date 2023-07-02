@@ -1,7 +1,7 @@
 # TAZITA'S SHOP
 
 ## Sobre el proyecto
-** Sitio ecommerce de productos para pasteleria llamado Tazita's Shop, realizado como proyecto final para el curso de React JS en CoderHouse. **
+**Sitio ecommerce de productos para pasteleria llamado Tazita's Shop, realizado como proyecto final para el curso de React JS en CoderHouse.**
 
 #### Dependencias utilizadas
 - Material UI
