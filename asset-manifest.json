@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/tazita-s-shop-proyect-reactJS/static/css/main.d96a2e34.css",
+    "main.js": "/tazita-s-shop-proyect-reactJS/static/js/main.866d871d.js",
+    "static/media/logo.png": "/tazita-s-shop-proyect-reactJS/static/media/logo.a487b2889b333d174ffb.png",
+    "index.html": "/tazita-s-shop-proyect-reactJS/index.html",
+    "main.d96a2e34.css.map": "/tazita-s-shop-proyect-reactJS/static/css/main.d96a2e34.css.map",
+    "main.866d871d.js.map": "/tazita-s-shop-proyect-reactJS/static/js/main.866d871d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d96a2e34.css",
+    "static/js/main.866d871d.js"
+  ]
+}
